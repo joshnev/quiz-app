@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.answer {
+  display: flex;
+  border-radius: 8px;
+  padding: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.25rem;
+  min-width: 110px;
+  color: #fff;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+  transition: all 0.4s linear;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.answer:hover {
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.answer.selected {
+  color: #fff;
+  background-color: rgb(30 100 240 / var(--tw-bg-opacity));
 }
